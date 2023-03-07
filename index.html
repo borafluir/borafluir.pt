@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bora Fluir</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      header {
+        background-color: orange;
+        padding: 20px;
+        text-align: center;
+      }
+      nav {
+        display: none;
+      }
+      #menu-icon {
+        display: inline-block;
+        background-image: url('https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/images/ui-icons_222222_256x240.png');
+        background-position: -96px -80px;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+      }
+      @media screen and (min-width: 600px) {
+        nav {
+          display: block;
+          text-align: center;
+        }
+        nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        nav li {
+          display: inline-block;
+          margin: 0 10px;
+        }
+        nav a {
+          color: white;
+          text-decoration: none;
+          font-size: 18px;
+          text-transform: uppercase;
+        }
+        #menu-icon {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Bora Fluir</h1>
+      <div id="menu-icon"></div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Página inicial</a></li>
+        <li><a href="#">Como utilizar</a></li>
+        <li><a href="#">Segurança</a></li>
+        <li><a href="#">Sustentabilidade</a></li>
+        <li><a href="#">Sobre nós</a></li>
+      </ul>
+    </nav>
+    <script>
+      $(document).ready(function() {
+        $('#menu-icon').click(function() {
+          $('nav').slideToggle();
+        });
+        $(window).resize(function() {
+          if ($(window).width() > 600) {
+            $('nav').removeAttr('style');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
