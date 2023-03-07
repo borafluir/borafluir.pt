@@ -52,33 +52,10 @@
           display: none;
         }
       }
+      .center { display: block; width: 50%; margin-left:auto; margin-left: auto; }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Bora Fluir</h1>
-      <div id="menu-icon"></div>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#">Página inicial</a></li>
-        <li><a href="#">Como utilizar</a></li>
-        <li><a href="#">Segurança</a></li>
-        <li><a href="#">Sustentabilidade</a></li>
-        <li><a href="#">Sobre nós</a></li>
-      </ul>
-    </nav>
-    <script>
-      $(document).ready(function() {
-        $('#menu-icon').click(function() {
-          $('nav').slideToggle();
-        });
-        $(window).resize(function() {
-          if ($(window).width() > 600) {
-            $('nav').removeAttr('style');
-          }
-        });
-      });
-    </script>
+    <img src="ico.png" class="center" alt="Bora Fluir" />
   </body>
 </html>
